@@ -15,8 +15,14 @@ def load_questions(filename='questions.json'):
 def get_daily_question(questions):
     # Use the current date to pick a question sequentially
     # This ensures we move to the next question every day without needing a database
+    
+    # We set a start date (April 28, 2026) so that question 0 is selected on this day
+    start_date = datetime(2026, 4, 28).toordinal()
     days_since_epoch = datetime.utcnow().toordinal()
-    question_index = days_since_epoch % len(questions)
+    
+    days_since_start = days_since_epoch - start_date
+    question_index = days_since_start % len(questions)
+    
     return questions[question_index]
 
 def send_telegram_message(question):

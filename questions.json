@@ -3,7 +3,7 @@
         {
             "id": 1,
             "title": "Contains Duplicate",
-            "url": "https://leetcode.com/problems/contains-duplicate/",
+            "url": "https://neetcode.io/problems/contains-duplicate",
             "pattern": "Arrays & Hashing",
             "difficulty": "Easy",
             "concept_refresher": "Use a Hash Set to store elements as you iterate through the array.",
@@ -12,16 +12,16 @@
         {
             "id": 2,
             "title": "Valid Anagram",
-            "url": "https://leetcode.com/problems/valid-anagram/",
+            "url": "https://neetcode.io/problems/valid-anagram",
             "pattern": "Arrays & Hashing",
             "difficulty": "Easy",
             "concept_refresher": "Count the frequency of each character using a Hash Map or an array of size 26.",
-            "mental_model": "Two strings are anagrams if they have the exact same character counts. Increment counts for the first string and decrement for the second string to check if all counts return to zero."
+            "mental_model": "Two strings are anagrams if they have the exact same character counts. Increment counts for the first string and decrement for the second string."
         },
         {
             "id": 3,
             "title": "Two Sum",
-            "url": "https://leetcode.com/problems/two-sum/",
+            "url": "https://neetcode.io/problems/two-sum",
             "pattern": "Arrays & Hashing",
             "difficulty": "Easy",
             "concept_refresher": "Store previously seen numbers and their indices in a Hash Map.",
@@ -30,7 +30,7 @@
         {
             "id": 4,
             "title": "Valid Palindrome",
-            "url": "https://leetcode.com/problems/valid-palindrome/",
+            "url": "https://neetcode.io/problems/valid-palindrome",
             "pattern": "Two Pointers",
             "difficulty": "Easy",
             "concept_refresher": "Initialize one pointer at the start and another at the end of the string.",
@@ -38,156 +38,156 @@
         },
         {
             "id": 5,
-            "title": "Two Sum II",
-            "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
-            "pattern": "Two Pointers",
-            "difficulty": "Medium",
-            "concept_refresher": "Use two pointers on a sorted array to find a target sum.",
-            "mental_model": "Because the array is sorted, moving the left pointer right increases the sum, and moving the right pointer left decreases the sum."
-        },
-        {
-            "id": 6,
-            "title": "3Sum",
-            "url": "https://leetcode.com/problems/3sum/",
-            "pattern": "Two Pointers",
-            "difficulty": "Medium",
-            "concept_refresher": "Sort the array and use the Two Sum II approach for each element.",
-            "mental_model": "Fix the first number. Then use left and right pointers on the remaining elements to find a sum that offsets the fixed number to zero."
-        },
-        {
-            "id": 7,
             "title": "Best Time to Buy and Sell Stock",
-            "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+            "url": "https://neetcode.io/problems/buy-and-sell-crypto",
             "pattern": "Sliding Window",
             "difficulty": "Easy",
             "concept_refresher": "Track the lowest minimum price seen so far.",
             "mental_model": "Iterate through the prices. Update the minimum price when you see a lower one, and calculate the profit using the current price minus the minimum price."
         },
         {
-            "id": 8,
-            "title": "Longest Substring Without Repeating Characters",
-            "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
-            "pattern": "Sliding Window",
-            "difficulty": "Medium",
-            "concept_refresher": "Maintain a dynamic window using a Hash Set.",
-            "mental_model": "Expand the right side of the window. If you see a duplicate character, shrink the left side of the window until the duplicate is removed."
-        },
-        {
-            "id": 9,
-            "title": "Longest Repeating Character Replacement",
-            "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
-            "pattern": "Sliding Window",
-            "difficulty": "Medium",
-            "concept_refresher": "Track character frequencies within the current window.",
-            "mental_model": "The number of replacements needed is the window length minus the count of the most frequent character. If this exceeds k, shrink the window."
-        },
-        {
-            "id": 10,
+            "id": 6,
             "title": "Valid Parentheses",
-            "url": "https://leetcode.com/problems/valid-parentheses/",
+            "url": "https://neetcode.io/problems/valid-parentheses",
             "pattern": "Stack",
             "difficulty": "Easy",
             "concept_refresher": "Push opening brackets to a stack and pop when encountering closing brackets.",
-            "mental_model": "A valid string means every closing bracket matches the most recently seen unmatched opening bracket, which perfectly aligns with the LIFO structure of a stack."
+            "mental_model": "A valid string means every closing bracket matches the most recently seen unmatched opening bracket."
         },
         {
-            "id": 11,
-            "title": "Min Stack",
-            "url": "https://leetcode.com/problems/min-stack/",
-            "pattern": "Stack",
-            "difficulty": "Medium",
-            "concept_refresher": "Use a parallel stack to keep track of the minimum value.",
-            "mental_model": "Whenever you push a new value, also push the minimum of the new value and the current minimum to the secondary stack."
-        },
-        {
-            "id": 12,
-            "title": "Evaluate Reverse Polish Notation",
-            "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
-            "pattern": "Stack",
-            "difficulty": "Medium",
-            "concept_refresher": "Evaluate expressions by pushing numbers and popping on operators.",
-            "mental_model": "When you encounter a math operator, pop the last two numbers from the stack, perform the operation, and push the result back onto the stack."
-        },
-        {
-            "id": 13,
+            "id": 7,
             "title": "Binary Search",
-            "url": "https://leetcode.com/problems/binary-search/",
+            "url": "https://neetcode.io/problems/binary-search",
             "pattern": "Binary Search",
             "difficulty": "Easy",
             "concept_refresher": "Find a target in a sorted array by halving the search space.",
-            "mental_model": "Compare the target to the middle element. Discard the half of the array that cannot contain the target based on this comparison."
+            "mental_model": "Compare the target to the middle element. Discard the half of the array that cannot contain the target."
         },
         {
-            "id": 14,
-            "title": "Search a 2D Matrix",
-            "url": "https://leetcode.com/problems/search-a-2d-matrix/",
-            "pattern": "Binary Search",
-            "difficulty": "Medium",
-            "concept_refresher": "Apply binary search logic to a grid that is globally sorted.",
-            "mental_model": "Map the 1D middle index to 2D row and column indices using integer division and modulo operations, then perform standard binary search."
-        },
-        {
-            "id": 15,
-            "title": "Koko Eating Bananas",
-            "url": "https://leetcode.com/problems/koko-eating-bananas/",
-            "pattern": "Binary Search",
-            "difficulty": "Medium",
-            "concept_refresher": "Use binary search on the range of possible eating speeds.",
-            "mental_model": "The minimum speed is 1 and the maximum is the largest pile. Guess a speed, calculate total hours needed, and adjust the binary search boundaries accordingly."
-        },
-        {
-            "id": 16,
+            "id": 8,
             "title": "Reverse Linked List",
-            "url": "https://leetcode.com/problems/reverse-linked-list/",
+            "url": "https://neetcode.io/problems/reverse-a-linked-list",
             "pattern": "Linked List",
             "difficulty": "Easy",
             "concept_refresher": "Change the next pointers of each node to point to the previous node.",
-            "mental_model": "Keep track of previous, current, and next nodes. Update the current node's pointer to the previous node, then shift all three variables forward."
+            "mental_model": "Keep track of previous, current, and next nodes. Update the current node's pointer to the previous node."
         },
         {
-            "id": 17,
+            "id": 9,
             "title": "Merge Two Sorted Lists",
-            "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+            "url": "https://neetcode.io/problems/merge-two-sorted-linked-lists",
             "pattern": "Linked List",
             "difficulty": "Easy",
             "concept_refresher": "Use a dummy node to easily construct the merged list.",
-            "mental_model": "Compare the values at the heads of both lists. Attach the smaller value to the merged list and advance the pointer in that specific list."
+            "mental_model": "Compare the values at the heads of both lists. Attach the smaller value to the merged list and advance the pointer."
         },
         {
-            "id": 18,
-            "title": "Reorder List",
-            "url": "https://leetcode.com/problems/reorder-list/",
-            "pattern": "Linked List",
-            "difficulty": "Medium",
-            "concept_refresher": "Find the middle, reverse the second half, and merge the two halves.",
-            "mental_model": "This problem combines three fundamental linked list techniques into one. First split it, then reverse the tail end, and finally interleave the two resulting lists."
-        },
-        {
-            "id": 19,
+            "id": 10,
             "title": "Invert Binary Tree",
-            "url": "https://leetcode.com/problems/invert-binary-tree/",
+            "url": "https://neetcode.io/problems/invert-a-binary-tree",
             "pattern": "Trees",
             "difficulty": "Easy",
             "concept_refresher": "Recursively swap the left and right child pointers of every node.",
-            "mental_model": "Starting from the root, swap its two children. Then call the same invert function on both the left child and the right child."
+            "mental_model": "Starting from the root, swap its two children. Then call the same invert function on both child subtrees."
         },
         {
-            "id": 20,
+            "id": 11,
             "title": "Maximum Depth of Binary Tree",
-            "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+            "url": "https://neetcode.io/problems/depth-of-binary-tree",
             "pattern": "Trees",
             "difficulty": "Easy",
             "concept_refresher": "Calculate the depth by finding the longest path from root to leaf.",
-            "mental_model": "The depth of any node is 1 plus the maximum of the depth of its left subtree and the depth of its right subtree. The base case is a null node returning 0."
+            "mental_model": "The depth of any node is 1 plus the maximum of the depth of its left subtree and its right subtree."
+        },
+        {
+            "id": 12,
+            "title": "Diameter of Binary Tree",
+            "url": "https://neetcode.io/problems/diameter-of-binary-tree",
+            "pattern": "Trees",
+            "difficulty": "Easy",
+            "concept_refresher": "Find the longest path between any two nodes.",
+            "mental_model": "During a depth-first search, compute the height of the subtrees. The diameter at the current node is the sum of these heights."
+        },
+        {
+            "id": 13,
+            "title": "Two Sum II",
+            "url": "https://neetcode.io/problems/two-integer-sum-ii",
+            "pattern": "Two Pointers",
+            "difficulty": "Medium",
+            "concept_refresher": "Use two pointers on a sorted array to find a target sum.",
+            "mental_model": "Because the array is sorted, moving the left pointer right increases the sum and moving the right pointer left decreases it."
+        },
+        {
+            "id": 14,
+            "title": "3Sum",
+            "url": "https://neetcode.io/problems/three-integer-sum",
+            "pattern": "Two Pointers",
+            "difficulty": "Medium",
+            "concept_refresher": "Sort the array and use the Two Sum II approach for each element.",
+            "mental_model": "Fix the first number and use left and right pointers on the remaining elements to find a sum that offsets the fixed number to zero."
+        },
+        {
+            "id": 15,
+            "title": "Longest Substring Without Repeating Characters",
+            "url": "https://neetcode.io/problems/longest-substring-without-duplicates",
+            "pattern": "Sliding Window",
+            "difficulty": "Medium",
+            "concept_refresher": "Maintain a dynamic window using a Hash Set.",
+            "mental_model": "Expand the right side. If you see a duplicate, shrink the left side of the window until the duplicate is removed."
+        },
+        {
+            "id": 16,
+            "title": "Longest Repeating Character Replacement",
+            "url": "https://neetcode.io/problems/longest-repeating-substring-with-replacement",
+            "pattern": "Sliding Window",
+            "difficulty": "Medium",
+            "concept_refresher": "Track character frequencies within the current window.",
+            "mental_model": "The number of replacements needed is the window length minus the count of the most frequent character."
+        },
+        {
+            "id": 17,
+            "title": "Min Stack",
+            "url": "https://neetcode.io/problems/minimum-stack",
+            "pattern": "Stack",
+            "difficulty": "Medium",
+            "concept_refresher": "Use a parallel stack to keep track of the minimum value.",
+            "mental_model": "Whenever you push a new value, also push the minimum of the new value and the current minimum to a secondary stack."
+        },
+        {
+            "id": 18,
+            "title": "Evaluate Reverse Polish Notation",
+            "url": "https://neetcode.io/problems/evaluate-reverse-polish-notation",
+            "pattern": "Stack",
+            "difficulty": "Medium",
+            "concept_refresher": "Evaluate expressions by pushing numbers and popping on operators.",
+            "mental_model": "When you encounter a math operator, pop the last two numbers from the stack and perform the operation."
+        },
+        {
+            "id": 19,
+            "title": "Search a 2D Matrix",
+            "url": "https://neetcode.io/problems/search-2d-matrix",
+            "pattern": "Binary Search",
+            "difficulty": "Medium",
+            "concept_refresher": "Apply binary search logic to a grid that is globally sorted.",
+            "mental_model": "Map the 1D middle index to 2D row and column indices using integer division and modulo operations."
+        },
+        {
+            "id": 20,
+            "title": "Koko Eating Bananas",
+            "url": "https://neetcode.io/problems/eating-bananas",
+            "pattern": "Binary Search",
+            "difficulty": "Medium",
+            "concept_refresher": "Use binary search on the range of possible eating speeds.",
+            "mental_model": "Guess a speed, calculate total hours needed, and adjust the binary search boundaries accordingly."
         },
         {
             "id": 21,
-            "title": "Diameter of Binary Tree",
-            "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
-            "pattern": "Trees",
-            "difficulty": "Easy",
-            "concept_refresher": "Find the longest path between any two nodes, which may or may not pass through the root.",
-            "mental_model": "During a depth-first search, compute the height of the left and right subtrees. The diameter passing through the current node is the sum of these two heights. Update a global maximum with this value."
+            "title": "Reorder List",
+            "url": "https://neetcode.io/problems/reorder-linked-list",
+            "pattern": "Linked List",
+            "difficulty": "Medium",
+            "concept_refresher": "Find the middle, reverse the second half, and merge the two halves.",
+            "mental_model": "This problem combines three fundamental linked list techniques: splitting, reversing, and interleaving."
         }
     ]
 }
