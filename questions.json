@@ -3,191 +3,191 @@
         {
             "id": 1,
             "title": "Contains Duplicate",
-            "url": "https://neetcode.io/problems/contains-duplicate",
+            "url": "https://neetcode.io/problems/duplicate-integer",
             "pattern": "Arrays & Hashing",
             "difficulty": "Easy",
             "concept_refresher": "Use a Hash Set to store elements as you iterate through the array.",
-            "mental_model": "Checking if an element exists in a Hash Set takes O(1) time. If you encounter a number that is already in the set, you found a duplicate."
+            "mental_model": "You scan the array once; for each number you ask 'have I already seen this in my set?'. If yes, you immediately know there is a duplicate."
         },
         {
             "id": 2,
             "title": "Valid Anagram",
-            "url": "https://neetcode.io/problems/valid-anagram",
+            "url": "https://neetcode.io/problems/is-anagram",
             "pattern": "Arrays & Hashing",
             "difficulty": "Easy",
             "concept_refresher": "Count the frequency of each character using a Hash Map or an array of size 26.",
-            "mental_model": "Two strings are anagrams if they have the exact same character counts. Increment counts for the first string and decrement for the second string."
+            "mental_model": "Think of each word as a histogram of letters. Two strings are anagrams if their histograms are identical, so you increment counts for s and decrement for t and verify all counts end at zero."
         },
         {
             "id": 3,
             "title": "Two Sum",
-            "url": "https://neetcode.io/problems/two-sum",
+            "url": "https://neetcode.io/problems/two-integer-sum",
             "pattern": "Arrays & Hashing",
             "difficulty": "Easy",
-            "concept_refresher": "Store previously seen numbers and their indices in a Hash Map.",
-            "mental_model": "For each number, calculate the complement needed to reach the target. Check if this complement already exists in your map to solve it in a single pass."
+            "concept_refresher": "Use a Hash Map from value to index while iterating through the array.",
+            "mental_model": "For each number x you compute target - x and ask 'did I already see this complement?'. The hashmap lets you find complements in O(1), so the first time both sides of the sum appear you can return their indices."
         },
         {
             "id": 4,
-            "title": "Valid Palindrome",
-            "url": "https://neetcode.io/problems/valid-palindrome",
-            "pattern": "Two Pointers",
-            "difficulty": "Easy",
-            "concept_refresher": "Initialize one pointer at the start and another at the end of the string.",
-            "mental_model": "Move both pointers inward while skipping non-alphanumeric characters. Compare the characters at both pointers at each step."
+            "title": "Group Anagrams",
+            "url": "https://neetcode.io/problems/anagram-groups",
+            "pattern": "Arrays & Hashing",
+            "difficulty": "Medium",
+            "concept_refresher": "Use a Hash Map where the key is either the sorted string or a 26-length frequency signature and the value is a list of words.",
+            "mental_model": "Every anagram family shares the same 'fingerprint' (sorted letters or frequency vector). You turn each word into its fingerprint and drop it into the matching bucket in the hashmap."
         },
         {
             "id": 5,
-            "title": "Best Time to Buy and Sell Stock",
-            "url": "https://neetcode.io/problems/buy-and-sell-crypto",
-            "pattern": "Sliding Window",
-            "difficulty": "Easy",
-            "concept_refresher": "Track the lowest minimum price seen so far.",
-            "mental_model": "Iterate through the prices. Update the minimum price when you see a lower one, and calculate the profit using the current price minus the minimum price."
+            "title": "Top K Frequent Elements",
+            "url": "https://neetcode.io/problems/top-k-elements-in-list",
+            "pattern": "Arrays & Hashing",
+            "difficulty": "Medium",
+            "concept_refresher": "First build a frequency Hash Map, then either use bucket sort (array of lists indexed by frequency) or a heap to extract the k most frequent.",
+            "mental_model": "Picture buckets where index = frequency. You throw each value into the bucket of its count, then scan buckets from highest frequency downward, collecting elements until you have k."
         },
         {
             "id": 6,
-            "title": "Valid Parentheses",
-            "url": "https://neetcode.io/problems/valid-parentheses",
-            "pattern": "Stack",
-            "difficulty": "Easy",
-            "concept_refresher": "Push opening brackets to a stack and pop when encountering closing brackets.",
-            "mental_model": "A valid string means every closing bracket matches the most recently seen unmatched opening bracket."
+            "title": "Product of Array Except Self",
+            "url": "https://neetcode.io/problems/products-of-array-discluding-self",
+            "pattern": "Arrays & Hashing",
+            "difficulty": "Medium",
+            "concept_refresher": "Compute prefix products (product of all elements to the left) and postfix products (to the right) without using division.",
+            "mental_model": "For index i, the answer is 'product of everything on the left' × 'product of everything on the right'. You can get both in O(n) using two passes while reusing one result array."
         },
         {
             "id": 7,
-            "title": "Binary Search",
-            "url": "https://neetcode.io/problems/binary-search",
-            "pattern": "Binary Search",
-            "difficulty": "Easy",
-            "concept_refresher": "Find a target in a sorted array by halving the search space.",
-            "mental_model": "Compare the target to the middle element. Discard the half of the array that cannot contain the target."
+            "title": "Valid Sudoku",
+            "url": "https://neetcode.io/problems/valid-sudoku/question",
+            "pattern": "Arrays & Hashing",
+            "difficulty": "Medium",
+            "concept_refresher": "Track seen digits using sets (or bitmasks) for each row, each column, and each 3×3 sub-box.",
+            "mental_model": "Treat each placement as a constraint check: before placing digit d in (r, c), you ask 'is d already in row r, column c, or box b?'. If it appears in any of the three sets, the board is invalid."
         },
         {
             "id": 8,
-            "title": "Reverse Linked List",
-            "url": "https://neetcode.io/problems/reverse-a-linked-list",
-            "pattern": "Linked List",
-            "difficulty": "Easy",
-            "concept_refresher": "Change the next pointers of each node to point to the previous node.",
-            "mental_model": "Keep track of previous, current, and next nodes. Update the current node's pointer to the previous node."
+            "title": "Encode and Decode Strings",
+            "url": "https://neetcode.io/problems/string-encode-and-decode/question",
+            "pattern": "Arrays & Hashing",
+            "difficulty": "Medium",
+            "concept_refresher": "Use length‑prefixed encoding: for each string write '<length>#<string>' concatenated together.",
+            "mental_model": "The decoder walks the string, first reading digits until '#', interpreting them as the length L, then taking exactly L characters as the next word. Length metadata makes special characters inside the words irrelevant."
         },
         {
             "id": 9,
-            "title": "Merge Two Sorted Lists",
-            "url": "https://neetcode.io/problems/merge-two-sorted-linked-lists",
-            "pattern": "Linked List",
-            "difficulty": "Easy",
-            "concept_refresher": "Use a dummy node to easily construct the merged list.",
-            "mental_model": "Compare the values at the heads of both lists. Attach the smaller value to the merged list and advance the pointer."
+            "title": "Longest Consecutive Sequence",
+            "url": "https://neetcode.io/problems/longest-consecutive-sequence/question",
+            "pattern": "Arrays & Hashing",
+            "difficulty": "Medium",
+            "concept_refresher": "Insert all numbers into a Hash Set, and only start counting from numbers that have no predecessor (n − 1 not in the set).",
+            "mental_model": "Think of each consecutive run as starting at a 'head' value with no left neighbor. For each head, you walk right (n, n+1, n+2, …) as long as numbers exist in the set, tracking the longest run length."
         },
         {
             "id": 10,
-            "title": "Invert Binary Tree",
-            "url": "https://neetcode.io/problems/invert-a-binary-tree",
-            "pattern": "Trees",
+            "title": "Valid Palindrome",
+            "url": "https://neetcode.io/problems/is-palindrome/question",
+            "pattern": "Two Pointers",
             "difficulty": "Easy",
-            "concept_refresher": "Recursively swap the left and right child pointers of every node.",
-            "mental_model": "Starting from the root, swap its two children. Then call the same invert function on both child subtrees."
+            "concept_refresher": "Normalize the string (ignore non‑alphanumeric, lower‑case), then use two pointers from both ends moving inward.",
+            "mental_model": "Imagine two fingers, one at the start and one at the end of the cleaned string. They walk toward each other and must always see the same character; a mismatch means it's not a palindrome."
         },
         {
             "id": 11,
-            "title": "Maximum Depth of Binary Tree",
-            "url": "https://neetcode.io/problems/depth-of-binary-tree",
-            "pattern": "Trees",
-            "difficulty": "Easy",
-            "concept_refresher": "Calculate the depth by finding the longest path from root to leaf.",
-            "mental_model": "The depth of any node is 1 plus the maximum of the depth of its left subtree and its right subtree."
+            "title": "3Sum",
+            "url": "https://neetcode.io/problems/three-integer-sum/question",
+            "pattern": "Two Pointers",
+            "difficulty": "Medium",
+            "concept_refresher": "Sort the array, then for each fixed index i use two pointers (l, r) to find triplets that sum to zero while skipping duplicates.",
+            "mental_model": "Think of anchoring one number and then squeezing a window [l, r] around it. If the sum is too big you shrink from the right, if too small you grow from the left, and only exact zero gets recorded."
         },
         {
             "id": 12,
-            "title": "Diameter of Binary Tree",
-            "url": "https://neetcode.io/problems/diameter-of-binary-tree",
-            "pattern": "Trees",
-            "difficulty": "Easy",
-            "concept_refresher": "Find the longest path between any two nodes.",
-            "mental_model": "During a depth-first search, compute the height of the subtrees. The diameter at the current node is the sum of these heights."
+            "title": "Container With Most Water",
+            "url": "https://neetcode.io/problems/max-water-container/question",
+            "pattern": "Two Pointers",
+            "difficulty": "Medium",
+            "concept_refresher": "Use two pointers at the ends, compute area each time, and move the pointer at the shorter height inward.",
+            "mental_model": "Water amount is (width) × min(heightLeft, heightRight). Since width shrinks as pointers move, the only chance to improve area is by increasing the limiting (shorter) height."
         },
         {
             "id": 13,
-            "title": "Two Sum II",
-            "url": "https://neetcode.io/problems/two-integer-sum-ii",
-            "pattern": "Two Pointers",
-            "difficulty": "Medium",
-            "concept_refresher": "Use two pointers on a sorted array to find a target sum.",
-            "mental_model": "Because the array is sorted, moving the left pointer right increases the sum and moving the right pointer left decreases it."
+            "title": "Best Time to Buy and Sell Stock",
+            "url": "https://neetcode.io/problems/buy-and-sell-crypto/question",
+            "pattern": "Greedy / Prefix",
+            "difficulty": "Easy",
+            "concept_refresher": "Track the minimum price seen so far and the best profit if you sold today.",
+            "mental_model": "As you scan days from left to right, you keep the best 'buy so far'. For each price, you ask 'what if I had bought at the lowest so far and sold today?' and keep the maximum profit."
         },
         {
             "id": 14,
-            "title": "3Sum",
-            "url": "https://neetcode.io/problems/three-integer-sum",
-            "pattern": "Two Pointers",
+            "title": "Longest Substring Without Repeating Characters",
+            "url": "https://neetcode.io/problems/longest-substring-without-duplicates/question",
+            "pattern": "Sliding Window",
             "difficulty": "Medium",
-            "concept_refresher": "Sort the array and use the Two Sum II approach for each element.",
-            "mental_model": "Fix the first number and use left and right pointers on the remaining elements to find a sum that offsets the fixed number to zero."
+            "concept_refresher": "Use a sliding window with a Hash Set or map to ensure all characters in the window are unique.",
+            "mental_model": "Think of a stretchy window on the string. You extend the right side until you hit a duplicate, then shrink from the left until the window becomes 'all unique' again, tracking the maximum window size."
         },
         {
             "id": 15,
-            "title": "Longest Substring Without Repeating Characters",
-            "url": "https://neetcode.io/problems/longest-substring-without-duplicates",
+            "title": "Permutation in String",
+            "url": "https://neetcode.io/problems/permutation-string/question",
             "pattern": "Sliding Window",
             "difficulty": "Medium",
-            "concept_refresher": "Maintain a dynamic window using a Hash Set.",
-            "mental_model": "Expand the right side. If you see a duplicate, shrink the left side of the window until the duplicate is removed."
+            "concept_refresher": "Maintain character frequency counts for s1 and for a fixed-size sliding window over s2.",
+            "mental_model": "You slide a window of length |s1| over s2. If at some position the character frequency vector of the window equals that of s1, that window is a permutation of s1."
         },
         {
             "id": 16,
-            "title": "Longest Repeating Character Replacement",
-            "url": "https://neetcode.io/problems/longest-repeating-substring-with-replacement",
-            "pattern": "Sliding Window",
-            "difficulty": "Medium",
-            "concept_refresher": "Track character frequencies within the current window.",
-            "mental_model": "The number of replacements needed is the window length minus the count of the most frequent character."
+            "title": "Valid Parentheses",
+            "url": "https://neetcode.io/problems/valid-parentheses/question",
+            "pattern": "Stack",
+            "difficulty": "Easy",
+            "concept_refresher": "Use a stack; push opening brackets and on each closing bracket check the top of the stack for the matching type.",
+            "mental_model": "Think of the stack as a 'waiting room' for opens. Every close must perfectly match the most recent open; if at the end the room is empty and no mismatch occurred, the string is valid."
         },
         {
             "id": 17,
             "title": "Min Stack",
-            "url": "https://neetcode.io/problems/minimum-stack",
-            "pattern": "Stack",
+            "url": "https://neetcode.io/problems/min-stack/question",
+            "pattern": "Stack / Design",
             "difficulty": "Medium",
-            "concept_refresher": "Use a parallel stack to keep track of the minimum value.",
-            "mental_model": "Whenever you push a new value, also push the minimum of the new value and the current minimum to a secondary stack."
+            "concept_refresher": "Maintain two stacks: one for values and one for the minimum value at each depth.",
+            "mental_model": "Each time you push, you also push the new 'current minimum so far'. That way the top of the min‑stack always mirrors the minimum of all elements in the main stack, so getMin is O(1)."
         },
         {
             "id": 18,
-            "title": "Evaluate Reverse Polish Notation",
-            "url": "https://neetcode.io/problems/evaluate-reverse-polish-notation",
-            "pattern": "Stack",
-            "difficulty": "Medium",
-            "concept_refresher": "Evaluate expressions by pushing numbers and popping on operators.",
-            "mental_model": "When you encounter a math operator, pop the last two numbers from the stack and perform the operation."
+            "title": "Binary Search",
+            "url": "https://neetcode.io/problems/binary-search/question",
+            "pattern": "Binary Search",
+            "difficulty": "Easy",
+            "concept_refresher": "Use two indices (left, right), compute mid, and shrink the search range depending on comparison with target.",
+            "mental_model": "You repeatedly ask 'is the target in the left half or the right half?'. Each step throws away half of the remaining array, giving O(log n) time."
         },
         {
             "id": 19,
-            "title": "Search a 2D Matrix",
-            "url": "https://neetcode.io/problems/search-2d-matrix",
-            "pattern": "Binary Search",
-            "difficulty": "Medium",
-            "concept_refresher": "Apply binary search logic to a grid that is globally sorted.",
-            "mental_model": "Map the 1D middle index to 2D row and column indices using integer division and modulo operations."
+            "title": "Invert Binary Tree",
+            "url": "https://neetcode.io/problems/invert-a-binary-tree/question",
+            "pattern": "Trees / DFS",
+            "difficulty": "Easy",
+            "concept_refresher": "Use DFS or BFS and swap left and right children at every node.",
+            "mental_model": "Imagine holding a mirror in front of the tree. Recursively, each node swaps its left and right pointers, so the structure becomes the mirror image of the original."
         },
         {
             "id": 20,
-            "title": "Koko Eating Bananas",
-            "url": "https://neetcode.io/problems/eating-bananas",
-            "pattern": "Binary Search",
+            "title": "Merge Intervals",
+            "url": "https://neetcode.io/problems/merge-intervals/question",
+            "pattern": "Intervals / Sorting",
             "difficulty": "Medium",
-            "concept_refresher": "Use binary search on the range of possible eating speeds.",
-            "mental_model": "Guess a speed, calculate total hours needed, and adjust the binary search boundaries accordingly."
+            "concept_refresher": "Sort intervals by start time, then merge by comparing each interval to the last one in the output.",
+            "mental_model": "Once intervals are sorted, you maintain a 'current merged interval'. If the next interval overlaps, you extend the end; if it does not, you close the current one and start a new merged block."
         },
         {
             "id": 21,
-            "title": "Reorder List",
-            "url": "https://neetcode.io/problems/reorder-linked-list",
-            "pattern": "Linked List",
+            "title": "Subsets",
+            "url": "https://neetcode.io/problems/subsets/question",
+            "pattern": "Backtracking",
             "difficulty": "Medium",
-            "concept_refresher": "Find the middle, reverse the second half, and merge the two halves.",
-            "mental_model": "This problem combines three fundamental linked list techniques: splitting, reversing, and interleaving."
+            "concept_refresher": "Use backtracking: at each index decide to either include the element in the current subset or skip it.",
+            "mental_model": "You explore a binary decision tree where each level answers 'take this element or not?'. Each path from root to leaf corresponds to one subset."
         }
     ]
 }
