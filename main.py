@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+import html
 from datetime import datetime
 
 # Load credentials from environment variables
@@ -28,19 +29,26 @@ def get_daily_question(questions):
 def send_telegram_message(question):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
     
+    # Escape special characters to avoid breaking Telegram HTML parser
+    safe_title = html.escape(question['title'])
+    safe_pattern = html.escape(question['pattern'])
+    safe_difficulty = html.escape(question['difficulty'])
+    safe_concept = html.escape(question['concept_refresher'])
+    safe_mental_model = html.escape(question['mental_model'])
+
     # Format the message using HTML and spoiler tags
     message_text = f"""
 <b>Daily NeetCode Challenge</b> 🚀
 
-<b>Question:</b> {question['title']}
-<b>Pattern:</b> {question['pattern']}
-<b>Difficulty:</b> {question['difficulty']}
+<b>Question:</b> {safe_title}
+<b>Pattern:</b> {safe_pattern}
+<b>Difficulty:</b> {safe_difficulty}
 
 <a href="{question['url']}">Click here to solve</a>
 
 <b>Concept & Mental Model (Tap to reveal):</b>
-<tg-spoiler><b>Concept:</b> {question['concept_refresher']}</tg-spoiler>
-<tg-spoiler><b>Mental Model:</b> {question['mental_model']}</tg-spoiler>
+<tg-spoiler><b>Concept:</b> {safe_concept}</tg-spoiler>
+<tg-spoiler><b>Mental Model:</b> {safe_mental_model}</tg-spoiler>
 """
 
     payload = {
