@@ -52,6 +52,12 @@ def send_telegram_message(question):
     }
     
     response = requests.post(url, json=payload)
+    
+    # Debug logging
+    print(f"DEBUG - CHAT_ID: {CHAT_ID}")
+    print(f"DEBUG - Response Status: {response.status_code}")
+    print(f"DEBUG - Response Body: {response.text}")
+    
     response.raise_for_status()
     print("Message sent successfully!")
 
